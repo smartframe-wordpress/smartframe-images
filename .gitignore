@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build
+build/
+smartframe-images.zip
+
+# IDE config
+.idea/
+
+# Mac specific DS_Store file
+.DS_Store
