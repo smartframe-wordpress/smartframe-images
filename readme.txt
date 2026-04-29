@@ -94,6 +94,28 @@ Standard WordPress image uploads expose the full image file, which can be downlo
 
 Yes. SmartFrame Technologies Ltd is a GDPR-compliant business based in Europe. Your personal data and registration details are never sold or shared with third parties. See the SmartFrame privacy policy at [https://smartframe.io/privacy-policy/](https://smartframe.io/privacy-policy/) for full details.
 
+
+== Development and Source Code ==
+
+This plugin uses modern JavaScript (React/Gutenberg blocks) and Tailwind CSS. The files located in the `build/` folder are compiled and minified.
+
+The uncompiled, human-readable source code is located in the `src/` folder of this plugin. The full development repository can also be found publicly at:
+https://github.com/smartframe-wordpress/smartframe-images
+
+### How to Build from Source
+To compile the source code yourself, you will need Node.js and npm installed.
+
+1. Open your terminal and navigate to the root directory of this plugin.
+2. Install the necessary development dependencies by running:
+   `npm install`
+3. To compile and minify the assets into the `build/` directory, run:
+   `npm run build`
+4. To create an installable plugin zip file run:
+    `npm run plugin-zip`
+5. For active development (which watches for changes and recompiles automatically), run:
+   `npm run start`
+
+
 == Changelog ==
 
 = 1.0.0 =
