@@ -1,0 +1,20 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+
+@scope (.sfimages-library-modal-results) {
+	/* stylelint-disable-next-line scss/at-rule-no-unknown */
+	@tailwind utilities;
+	/* stylelint-disable-next-line no-invalid-position-at-import-rule */
+	@import "tailwindcss/preflight.css" layer(base);
+}
+
+/* stylelint-disable-next-line scss/at-rule-no-unknown */
+@theme {
+	--color-menu: #f3f5f8;
+	--color-black: #090d25;
+	--color-primary: #303131;
+	--color-search-border: #c2c4c6;
+	--color-primary-weak: #676c8b;
+	--color-primary-button: #0226e3;
+	--color-primary-button-hover: #3550e9;
+}

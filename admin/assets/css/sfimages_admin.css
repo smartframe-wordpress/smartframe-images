@@ -1,0 +1,75 @@
+#insert-sfimages-button img {
+	filter: brightness(0) saturate(100%) invert(38%) sepia(76%) saturate(575%) hue-rotate(165deg) brightness(89%) contrast(91%);
+}
+
+#insert-sfimages-button:hover img {
+	filter: brightness(0) saturate(100%) invert(21%) sepia(88%) saturate(827%) hue-rotate(169deg) brightness(93%) contrast(96%);
+}
+
+/* stylelint-disable-next-line selector-id-pattern */
+#toplevel_page_smartframe_admin_settings .wp-menu-image img {
+	max-width: 100%;
+	height: 100%;
+	filter: brightness(0) invert(1);
+	padding: 0;
+}
+
+/* stylelint-disable-next-line selector-id-pattern */
+#toplevel_page_smartframe_admin_settings .current .wp-menu-image img {
+	opacity: 1;
+}
+
+/* stylelint-disable-next-line selector-id-pattern */
+.folded #adminmenu #toplevel_page_smartframe_admin_settings .wp-menu-image {
+	max-width: 100%;
+	position: relative;
+}
+
+/* stylelint-disable-next-line selector-id-pattern */
+#adminmenu #toplevel_page_smartframe_admin_settings .toplevel_page_smartframe_admin_settings:not(.current):hover img {
+	filter: brightness(0) saturate(100%) invert(58%) sepia(92%) saturate(241%) hue-rotate(169deg) brightness(96%) contrast(87%);
+}
+
+/* stylelint-disable-next-line selector-id-pattern */
+#adminmenu #toplevel_page_smartframe_admin_settings .toplevel_page_smartframe_admin_settings {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 7px;
+}
+
+/* stylelint-disable-next-line selector-id-pattern */
+#toplevel_page_smartframe_admin_settings .toplevel_page_smartframe_admin_settings .wp-menu-name {
+	padding: 8px;
+}
+
+/* Classic editor modal */
+
+/* SmartFrame Classic Editor Modal Styles */
+.sfimages-library-activate.components-button.button svg {
+	display: inline;
+	padding-right: 5px;
+}
+
+.sfimages-library-activate.components-button.button {
+	height: 30px;
+	display: inline-flex;
+}
+
+#insert-sfimages-button {
+	padding: 0;
+	margin: 0;
+}
+
+.sfimages-library-modal-results .components-modal__content {
+	padding: 0;
+}
+
+.sfimages-featured-library {
+	color: #fff !important;
+}
+
+.mce-sf-primary-btn button {
+	padding: 4px 6px !important;
+	line-height: 20px !important;
+}

@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/smartframe-image",
+	"version": "0.1.0",
+	"title": "SmartFrame",
+	"category": "media",
+	"description": "Embed images for free from SmartFrame Image Library",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": [ "left", "right", "center" ]
+	},
+	"textdomain": "smartframe-image",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:../tailwind.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js",
+	"attributes": {
+		"embedCode": {
+			"type": "string",
+			"default": ""
+		},
+		"embed": {
+			"type": "boolean",
+			"default": false
+		},
+		"customerId": {
+			"type": "string",
+			"default": ""
+		},
+		"imageId": {
+			"type": "string",
+			"default": ""
+		},
+		"imageWidth": {
+			"type": "number"
+		},
+		"imageHeight": {
+			"type": "number"
+		},
+		"maxWidth": {
+			"type": "number",
+			"default": null
+		}
+	}
+}

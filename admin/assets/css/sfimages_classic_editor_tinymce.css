@@ -1,0 +1,113 @@
+.sf-shortcode-preview-wrapper {
+	display: flex;
+	max-width: fit-content;
+	min-width: 380px;
+	position: relative;
+	border: 2px dashed transparent;
+	justify-content: center;
+	align-items: center;
+}
+
+.aligncenter .sf-shortcode-preview-wrapper {
+	margin: auto;
+}
+
+.sf-shortcode-preview-wrapper p {
+	margin: 0;
+	line-height: 0;
+}
+
+.sf-shortcode-preview-wrapper .sf-preview-toolbar {
+	display: flex;
+	justify-content: end;
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.sf-shortcode-preview-wrapper .sf-preview-toolbar-inner {
+	border: 1px solid #a7aaad;
+	border-radius: 2px;
+	background: #efefef;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+	box-sizing: border-box;
+	margin-bottom: 8px;
+	-webkit-user-select: none;
+	user-select: none;
+	max-width: 98%;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sf-preview-toolbar-inner i {
+	font: 400 20px/1 dashicons, sans-serif;
+}
+
+.sf-shortcode-preview-wrapper button {
+	border: none;
+	cursor: pointer;
+	margin: 0 2px;
+}
+
+.mce-sf-primary-btn button {
+	padding: 4px 6px;
+}
+
+.sf-shortcode-preview-wrapper button:hover {
+	background: #f6f7f7;
+	color: #1d2327;
+	box-shadow: 0 0 0 2px #2271b1;
+	outline: 2px solid transparent;
+}
+
+.sf-remove-btn {
+	margin-left: 10px;
+}
+
+.sf-preview-toolbar-inner label {
+	font-size: 13.333px;
+	font-family: Arial, sans-serif;
+	line-height: normal;
+}
+
+.sf-preview-toolbar-inner input {
+	max-width: 100%;
+	width: 60px;
+	margin-right: 2px;
+}
+
+.sf-preview-toolbar .sfimages-button-label {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	bottom: 0;
+	background: #000;
+	color: #fff;
+	padding: 2px 10px;
+}
+
+.sf-shortcode-preview-wrapper button:hover .sfimages-button-label {
+	opacity: 1;
+	visibility: visible;
+}
+
+.sf-preview-toolbar-inner button.is-active {
+	background: #f6f7f7;
+	color: #1d2327;
+	box-shadow: 0 0 0 2px #2271b1;
+	outline: 2px solid transparent;
+}
+
+.sf-input-button {
+	background: #fff;
+	border: 1px solid #ddd;
+	padding: 3px 8px;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.07);
+	min-width: 60px;
+	text-align: left;
+	cursor: text;
+}

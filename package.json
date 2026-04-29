@@ -1,0 +1,69 @@
+{
+	"name": "smartframe-images",
+	"version": "1.0.0",
+	"description": "Embed images for free from SmartFrame Image Library",
+	"author": "The WordPress Contributors",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"files": [
+		"admin",
+		"src",
+		"build",
+		"includes",
+		"languages",
+		"LICENSE.txt",
+		"readme.txt",
+		"smartframe_images.php",
+		"uninstall.php",
+		"composer.json",
+		"composer.lock",
+		"package.json",
+		"package-lock.json",
+		"tailwind.config.js",
+		"webpack.config.js",
+		"postcss.config.js"
+	],
+	"scripts": {
+		"build": "npm-run-all --serial build:block build:css",
+		"build:block": "wp-scripts build --webpack-copy-php --blocks-manifest",
+		"build:css": "./node_modules/.bin/tailwindcss -i ./src/tailwind.css -o ./build/tailwind.css --minify",
+		"format": "npm-run-all format:js format:css",
+		"format:js": "wp-scripts format src admin",
+		"format:css": "wp-scripts lint-style 'src/**/*.{css,scss}' 'admin/**/*.{css,scss}' --fix",
+		"format-check": "wp-scripts format --check src admin",
+		"lint:css": "wp-scripts lint-style 'src/**/*.{css,scss}' 'admin/**/*.{css,scss}'",
+		"lint:js": "wp-scripts lint-js src admin",
+		"test": "npm-run-all lint:js lint:css format-check build",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "npm-run-all --parallel start:scripts start:tailwind",
+		"start:scripts": "wp-scripts start --webpack-copy-php --blocks-manifest",
+		"start:tailwind": "./node_modules/.bin/tailwindcss -i ./src/tailwind.css -o ./build/tailwind.css --watch"
+	},
+	"devDependencies": {
+		"@tailwindcss/cli": "^4.1.8",
+		"@tailwindcss/postcss": "^4.1.8",
+		"@wordpress/scripts": "^30.17.0",
+		"npm-run-all": "^4.1.5",
+		"postcss": "^8.5.6",
+		"react-icons": "^5.5.0",
+		"tailwindcss": "^4.1.8"
+	},
+	"eslintConfig": {
+		"extends": [
+			"plugin:@wordpress/eslint-plugin/recommended"
+		],
+		"env": {
+			"browser": true
+		},
+		"globals": {
+			"smartframe_preview_vars": "readonly",
+			"tinymce": "readonly",
+			"jQuery": "readonly",
+			"NodeFilter": "readonly"
+		},
+		"rules": {
+			"camelcase": "off"
+		}
+	}
+}

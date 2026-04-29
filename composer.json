@@ -1,0 +1,22 @@
+{
+  "name": "smartframe/smartframe-images",
+  "description": "Embed images for free from SmartFrame Image Library",
+  "require-dev": {
+    "squizlabs/php_codesniffer": "*",
+    "wp-coding-standards/wpcs": "^3.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "scripts": {
+    "lint": "find admin includes smartframe_images.php -type f -name '*.php' -print0 | xargs -0 -n1 php -l",
+    "phpcs": "./vendor/bin/phpcs --warning-severity=0",
+    "fix": "./vendor/bin/phpcbf",
+    "test": [
+      "@lint",
+      "@phpcs"
+    ]
+  }
+}
