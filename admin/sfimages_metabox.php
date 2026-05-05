@@ -88,7 +88,7 @@ class Smartframe_Metabox {
 
 	public function smartframe_metabox_classic_editor_container(string $content, int $post_id) {
 		$html  = '<div id="sf-classic-featured-image-root"></div>';
-		$html .= sprintf('<input type="hidden" name="smartframe_classic_nonce" value="%s" />', wp_create_nonce('smartframe_classic_nonce' . $post_id));
+		$html .= sprintf('<input type="hidden" name="smartframe_classic_nonce" value="%s" />', esc_attr(wp_create_nonce('smartframe_classic_nonce' . $post_id)));
 		return $content . $html;
 	}
 
