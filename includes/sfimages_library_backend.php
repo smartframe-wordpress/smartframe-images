@@ -24,7 +24,7 @@ class Smartframe_Featured_Image_Replacement {
 		];
 		wp_add_inline_script(
 			'wp-blocks',
-			'window.smartframeBlockSettings = ' . json_encode($data) . ';',
+			'window.smartframeBlockSettings = ' . wp_json_encode($data) . ';',
 			'before'
 		);
 	}

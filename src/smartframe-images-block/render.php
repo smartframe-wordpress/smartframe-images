@@ -26,7 +26,7 @@ if ( $smartframe_library->smartframe_is_aggregator_or_bot() ) {
 
 	if ($smartframe_customer_id && $smartframe_image_id) {
 		$smartframe_bot_url = "https://thumbs.smartframe.io/{$smartframe_customer_id}/{$smartframe_image_id}.webp?force-scraper=rss&t=rss";
-		echo '<img src="' . esc_url($smartframe_bot_url) . '" alt="SmartFrame Image" />';
+		echo '<img src="' . esc_url($smartframe_bot_url) . '" alt="' . esc_attr__('SmartFrame Image', 'smartframe-images') . '" />';
 		return;
 	}
 }
